@@ -1,0 +1,99 @@
+﻿
+@model MilesPerGallon.Models.Car
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<center>
+    <h2>Miles Per Gallon Tracker</h2>
+
+
+    <a asp-area="" asp-controller="Cars" asp-action="Index">View Car Log</a><br /><br />
+    <a asp-area="" asp-controller="Cars" asp-action="Create">Create new Entry</a><br /><br />
+    <a asp-area="" asp-controller="Cars" asp-action="Create">Create new Entry</a>
+
+
+
+    <br /><br /><br />
+
+
+
+
+    <h4>Search</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-controller="Cars" asp-action="Search">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CarModel" class="control-label"></label>
+                    <input asp-for="CarModel" class="form-control" />
+                    <span asp-validation-for="CarModel" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MilesDriven" class="control-label"></label>
+                    <input asp-for="MilesDriven" class="form-control" />
+                    <span asp-validation-for="MilesDriven" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GallonsFilled" class="control-label"></label>
+                    <input asp-for="GallonsFilled" class="form-control" />
+                    <span asp-validation-for="GallonsFilled" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FillupDate" class="control-label"></label>
+                    <input asp-for="FillupDate" class="form-control" />
+                    <span asp-validation-for="FillupDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br />
+    <form asp-controller="Cars" asp-action="Search">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+
+            <div class="form-group">
+
+                Last Name: <input type="text" name="searchString" /><br /><br />
+                First Name: <input type="text" name="searchString" /><br /><br />
+                Car Model: <input type="text" name="searchString" /><br /><br />
+                Miles Driven: <input type="text" name="searchString" /><br /><br />
+                Gallons Filled: <input type="text" name="searchString" /><br /><br />
+            </div>
+        </div>
+
+
+
+
+    </form>
+    </center>
